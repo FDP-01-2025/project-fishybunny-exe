@@ -1,20 +1,17 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/mi1WNrHU)
-# Proyecto de C++ - [Nombre del Juego]
+# Proyecto de C++ - [Deadly Roll]
 
 ## Descripción del Proyecto
 
-Breve descripción del juego, su propósito, cómo se juega y cualquier otro detalle importante que describa la idea general del proyecto.
-
-**Por ejemplo:**
-Este proyecto consiste en un juego de aventuras donde el jugador debe explorar un mundo virtual, recoger objetos, resolver acertijos y enfrentar enemigos. El juego utiliza estructuras de control como `if`, `switch`, y bucles `while` y `for` para generar interacciones dinámicas.
+ste proyecto consiste en un juego de combate por turnos en el que el jugador y un enemigo se enfrentan lanzando dados para decidir quién actúa en cada ronda. Ambos comienzan con puntos de ataque y vida, y el valor de cada lanzamiento se suma a su puntaje de ataque acumulado. El jugador que obtiene el valor más alto en el dado decide si desea atacar, defenderse, usar habilidades especiales o guardar puntos para turnos futuros. El juego introduce una estrategia basada en riesgo y oportunidad, utilizando estructuras como if, switch, while, for y do-while para controlar el flujo del juego, las decisiones del jugador y la dinámica de los combates. El objetivo es reducir la vida del enemigo a cero utilizando los puntos acumulados de forma estratégica.
 
 ## Equipo
 
-- **Nombre del equipo:** [Nombre del equipo]
+- **Nombre del equipo:** [FishyBunny.exe]
 
 ### Integrantes del equipo
 
-1. **Nombre completo:** [Nombre del estudiante 1]  
+1. **Nombre completo:** [Jorge Alejandro Erazo Durán]  
    **Carnet:** [Carnet del estudiante 1]
 
 2. **Nombre completo:** [Nombre del estudiante 2]  
