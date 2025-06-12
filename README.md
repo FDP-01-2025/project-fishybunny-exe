@@ -14,8 +14,8 @@ Este proyecto consiste en un juego de combate por turnos en el que el jugador y 
 1. **Nombre completo:** [Jorge Alejandro Erazo Durán]  
    **Carnet:** [00047225]
 
-2. **Nombre completo:** [Nombre del estudiante 2]  
-   **Carnet:** [Carnet del estudiante 2]
+2. **Nombre completo:** [Diego Roberto Cruz Novoa]  
+   **Carnet:** [00140725]
 
 3. **Nombre completo:** [Nombre del estudiante 3]  
    **Carnet:** [Carnet del estudiante 3]
