@@ -12,7 +12,7 @@ Este proyecto consiste en un juego de combate por turnos en el que el jugador y 
 ### Integrantes del equipo
 
 1. **Nombre completo:** [Jorge Alejandro Erazo Durán]  
-   **Carnet:** [Carnet del estudiante 1]
+   **Carnet:** [00047225]
 
 2. **Nombre completo:** [Nombre del estudiante 2]  
    **Carnet:** [Carnet del estudiante 2]
