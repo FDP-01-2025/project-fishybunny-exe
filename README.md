@@ -3,7 +3,7 @@
 
 ## Descripción del Proyecto
 
-ste proyecto consiste en un juego de combate por turnos en el que el jugador y un enemigo se enfrentan lanzando dados para decidir quién actúa en cada ronda. Ambos comienzan con puntos de ataque y vida, y el valor de cada lanzamiento se suma a su puntaje de ataque acumulado. El jugador que obtiene el valor más alto en el dado decide si desea atacar, defenderse, usar habilidades especiales o guardar puntos para turnos futuros. El juego introduce una estrategia basada en riesgo y oportunidad, utilizando estructuras como if, switch, while, for y do-while para controlar el flujo del juego, las decisiones del jugador y la dinámica de los combates. El objetivo es reducir la vida del enemigo a cero utilizando los puntos acumulados de forma estratégica.
+Este proyecto consiste en un juego de combate por turnos en el que el jugador y un enemigo se enfrentan lanzando dados para decidir quién actúa en cada ronda. Ambos comienzan con puntos de ataque y vida, y el valor de cada lanzamiento se suma a su puntaje de ataque acumulado. El jugador que obtiene el valor más alto en el dado decide si desea atacar, defenderse, usar habilidades especiales o guardar puntos para turnos futuros. El juego introduce una estrategia basada en riesgo y oportunidad, utilizando estructuras como if, switch, while, for y do-while para controlar el flujo del juego, las decisiones del jugador y la dinámica de los combates. El objetivo es reducir la vida del enemigo a cero utilizando los puntos acumulados de forma estratégica.
 
 ## Equipo
 
