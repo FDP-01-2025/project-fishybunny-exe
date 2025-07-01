@@ -17,8 +17,8 @@ Este proyecto consiste en un juego de combate por turnos en el que el jugador y 
 2. **Nombre completo:** [Diego Roberto Cruz Novoa]  
    **Carnet:** [00140725]
 
-3. **Nombre completo:** [Nombre del estudiante 3]  
-   **Carnet:** [Carnet del estudiante 3]
+3. **Nombre completo:** [Carlos Alberto Flores Bonilla]  
+   **Carnet:** [00079225]
 
 (Agregar más integrantes si es necesario)
 
