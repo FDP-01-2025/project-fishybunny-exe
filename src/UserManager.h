@@ -4,22 +4,22 @@
 #include <string>
 #include <vector>
 
-struct User {
-    std::string nickname;
-};
+// Carga y guarda usuarios
+void loadUsers();
+void saveUsers();
 
-#endif
+// Muestra lista de usuarios
+void showUsers();
 
-// ===== src/SkillManager.h =====
-#ifndef SKILLMANAGER_H
-#define SKILLMANAGER_H
+// Selecciona un usuario (retorna índice o -1 para gestionar)
+int selectUser();
 
-#include <string>
-#include <vector>
+// Crea y borra usuarios
+int createUser(const std::string &name);
+void deleteUser(int index);
 
-struct Skill {
-    std::string name;
-    int power;
-};
+// Consulta nombre y lista interna
+std::string getUserName(int index);
+const std::vector<std::string>& getUsers();
 
-#endif
+#endif // USERMANAGER_H
