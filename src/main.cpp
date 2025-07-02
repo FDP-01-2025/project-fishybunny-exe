@@ -1,7 +1,12 @@
-// Mensaje de bienvenida
 #include <iostream>
+#include "Menu.h"
+#include "UserManager.h"
+#include "CharacterManager.h"
+#include "ItemManager.h"
+#include "Game.h"
+#include "Utils.h"
 
-int main() {
-    std::cout << "Bienvenido a Deadly Roll\n";
-    return 0;
-}
+int main() {}
+    // Antes de llegar al menú principal, siempre cargamos usuarios
+
+
