@@ -1,18 +1,24 @@
-#ifndef CHARACTER_MANAGER_H // comprobamos si esta definida la libreria
-#define CHARACTER_MANAGER_H // definimos la libreria
+#ifndef CHARACTERMANAGER_H // comprueba si el la libreria esta definida
+#define CHARACTERMANAGER_H // definimos la libreria
+
 #include <string>
+#include <vector> //abrimos la libreria de los arrays
 using namespace std;
-// creamos el conjunto de variables para el personaje
+// agregamos las nuevas variables que va a tener el struct character
 struct Character
 {
     string name;
     int level;
+    int typeID;
+    int exp;
 };
-// creamos una clase para el manejo de personajes
-class CharacterManager
-{
-public:                                               // esto para que sea accesible desde afuera de la clase
-    void createCharacter(const Character &character); // declaramos la funcion para crear un personaje
-};
+// definimos las nuevas funciones de carga, guardado, mostrar, seleccionar, crear y borrar
+void loadCharacters(const string &user);
+void saveCharacters(const string &user);
+void showCharacters();
+int selectCharacter();
+int createCharacter(const string &name, int typeID);
+void deleteCharacter(int idx);
+const vector<Character> &getCharacters();
 
-#endif // terminamos nuestro if de la libreria
+#endif // terminamos la comprobacion de la libreria
