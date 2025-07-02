@@ -22,4 +22,4 @@ void deleteUser(int index);
 std::string getUserName(int index);
 const std::vector<std::string>& getUsers();
 
-#endif // USERMANAGER_H
+#endif

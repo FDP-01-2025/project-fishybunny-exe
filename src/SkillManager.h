@@ -8,3 +8,5 @@ struct Skill {
     std::string name;
     int power;
 };
+
+#endif
