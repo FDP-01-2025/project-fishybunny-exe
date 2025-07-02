@@ -7,10 +7,10 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
-
-void startGame(const std::string &username) {
-    std::srand((unsigned)std::time(nullptr));
-    std::cout << "\n=== Start Battle ===\n";
+using namespace std;
+void startGame(const string &username) {
+    srand((unsigned)time(nullptr));
+    cout << "\n=== Start Battle ===\n";
 
     // Cargar datos
     int userLevel      = getUserLevel(username);
@@ -20,12 +20,12 @@ void startGame(const std::string &username) {
     loadSkills();
 
     // Menu personajes propios
-    std::cout << "1) Default Characters (" << defaultChars.size() << " unlocked)\n"
+    cout << "1) Default Characters (" << defaultChars.size() << " unlocked)\n"
               << "2) Your Created Characters (" << customChars.size() << ")\n"
               << "3) Back to Menu\n"
               << "Choose: ";
     int pc = getIntInput(1,3);
     if (pc == 3) return;
 
-    std::vector<Character>* pool;
+    vector<Character>* pool;
 
