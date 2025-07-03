@@ -31,7 +31,7 @@ void showUsers() {
 int selectUser() {
     if (users.empty()) return -1;
     showUsers();
-    cout << "Select user (#) or 0 to manage: ";
+   cout << "Select user (#) or 0 to manage: ";
     int c = getIntInput(0, (int)users.size());
     return c ? c - 1 : -1;
 }
@@ -52,6 +52,7 @@ void deleteUser(int idx) {
         saveUsers();
     }
 }
+
 string getUserName(int idx) {
     return (idx >= 0 && idx < (int)users.size()) ? users[idx] : "";
 }

@@ -6,8 +6,14 @@
 using namespace std;
 struct Skill {
     string name;
-    int power;
+    int cost;
+    int typeID;
+    bool special;
 };
+
+void loadSkills();
+const vector<Skill>& getAllSkills();
+void showSkills();
 
 #endif
 

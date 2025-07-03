@@ -22,5 +22,5 @@ void deleteUser(int index);
 string getUserName(int index);
 const vector<string>& getUsers();
 
-#endif // USERMANAGER_H
+#endif
 
