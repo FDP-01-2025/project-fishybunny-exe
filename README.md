@@ -20,7 +20,8 @@ Este proyecto consiste en un juego de combate por turnos en el que el jugador y 
 3. **Nombre completo:** [Carlos Alberto Flores Bonilla]  
    **Carnet:** [00079225]
 
-(Agregar más integrantes si es necesario)
+4. **Nombre completo:** [César Fernando Fuentes Moreno]  
+   **Carnet:** [00118825]
 
 ## Instrucciones de Ejecución
 
