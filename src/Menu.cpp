@@ -27,3 +27,36 @@ void showMainMenu() {
 int selectMainOption() {
     return getIntInput(1,6);
 }
+
+// Gestión de usuarios desde el menú principal
+void manageUsers() {
+    while (true) {
+        showUsers();
+        cout << "\nUser Management:\n"
+                  << "1) Create User\n"
+                  << "2) Delete User\n"
+                  << "3) Back\n"
+                  << "Choose: ";
+        int c = getIntInput(1,3);
+        if (c == 1) {
+            cout << "Enter new user name: ";
+            string name;
+            getline(cin, name);
+            createUser(name);
+        } else if (c == 2) {
+            showUsers();
+            cout << "Select user # to delete: ";
+            int idx = getIntInput(1, (int)getUsers().size()) - 1;
+            deleteUser(idx);
+        } else {
+            break;
+        }
+    }
+}
+
+// Gestión de personajes (sin cambios)
+void createCharacterMenu(const string &username) {
+    loadCharacters(username);
+    cout << "\nCharacter Management:\n";
+
+    }
