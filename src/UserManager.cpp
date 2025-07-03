@@ -4,13 +4,13 @@
 #include <iostream>
 #include <vector>
 #include <string>
-
-static std::vector<std::string> users;
-static const std::string USERS_FILE = "users.txt";
+using namespace std;
+static vector<string> users;
+static const string USERS_FILE = "users.txt";
 
 void loadUsers() {
     users.clear();
-    std::vector<std::string> lines;
+    vector<string> lines;
     if (readFileLines(USERS_FILE, lines)) {
         for (auto &l : lines)
             if (!l.empty())
@@ -23,22 +23,22 @@ void saveUsers() {
 }
 
 void showUsers() {
-    std::cout << "\nUsers:\n";
+    cout << "\nUsers:\n";
     for (size_t i = 0; i < users.size(); ++i)
-        std::cout << i+1 << ") " << users[i] << "\n";
+        cout << i+1 << ") " << users[i] << "\n";
 }
 
 int selectUser() {
     if (users.empty()) return -1;
     showUsers();
-    std::cout << "Select user (#) or 0 to manage: ";
+    cout << "Select user (#) or 0 to manage: ";
     int c = getIntInput(0, (int)users.size());
     return c ? c - 1 : -1;
 }
 
-int createUser(const std::string &name) {
+int createUser(const string &name) {
     if (users.size() >= 3) {
-        std::cout << "Max 3 users.\n";
+        cout << "Max 3 users.\n";
         return -1;
     }
     users.push_back(name);
@@ -52,9 +52,10 @@ void deleteUser(int idx) {
         saveUsers();
     }
 }
-
-std::string getUserName(int idx) {
+string getUserName(int idx) {
     return (idx >= 0 && idx < (int)users.size()) ? users[idx] : "";
 }
 
-const std::vector<std::string>& getUsers() {
+const vector<string>& getUsers() {
+    return users;
+}

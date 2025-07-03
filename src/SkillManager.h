@@ -3,10 +3,11 @@
 
 #include <string>
 #include <vector>
-
+using namespace std;
 struct Skill {
-    std::string name;
+    string name;
     int power;
 };
 
 #endif
+

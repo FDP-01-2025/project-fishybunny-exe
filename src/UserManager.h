@@ -3,7 +3,7 @@
 
 #include <string>
 #include <vector>
-
+using namespace std;
 // Carga y guarda usuarios
 void loadUsers();
 void saveUsers();
@@ -15,11 +15,12 @@ void showUsers();
 int selectUser();
 
 // Crea y borra usuarios
-int createUser(const std::string &name);
+int createUser(const string &name);
 void deleteUser(int index);
 
 // Consulta nombre y lista interna
-std::string getUserName(int index);
-const std::vector<std::string>& getUsers();
+string getUserName(int index);
+const vector<string>& getUsers();
 
-#endif
+#endif // USERMANAGER_H
+
