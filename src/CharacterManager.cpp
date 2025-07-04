@@ -107,6 +107,6 @@ void deleteCharacter(int idx)
     }
 }
 
-const std::vector<Character>& getCharacters() {
+const vector<Character>& getCharacters() {
     return chars;
 }//correccion en la funcion de borrar personajes
