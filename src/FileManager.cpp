@@ -1,4 +1,4 @@
-#include "File_Manager.h"
+#include "FileManager.h"
 #include <fstream>
 
 bool readFileLines(const std::string &path, std::vector<std::string> &lines) {

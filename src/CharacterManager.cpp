@@ -101,5 +101,12 @@ int createCharacter(const string &name, int typeID)
 //empezamos a crear la funcion para que el usuario pueda borrar a sus personajes
 void deleteCharacter(int idx)
 {
-    if (idx >= 0 && idx < (int)chars.size())
-    {
+    if (idx >= 0 && idx < (int)chars.size()) {
+        chars.erase(chars.begin() + idx);
+        saveCharacters(curUser);
+    }
+}
+
+const std::vector<Character>& getCharacters() {
+    return chars;
+}//correccion en la funcion de borrar personajes

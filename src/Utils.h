@@ -19,5 +19,4 @@ float getTypeMultiplier(int atkType, int defType);
 // Nombre de tipo a partir del ID
 std::string getTypeName(int typeID);
 
-
 #endif
