@@ -54,7 +54,7 @@ void showInventory() // Muestra en pantalla el inventario del usuario
                   << " (" << inventory[i].duration << " turns)\n";
     }
 }
-bool addRandomItem() //Añade un item random 
+bool addRandomItem() // Añade un item random
 {
     if (inventory.size() >= MAX_INV)
     {
@@ -68,7 +68,7 @@ bool addRandomItem() //Añade un item random
     return true;
 }
 
-void deleteItem(int idx) //Elimina el item
+void deleteItem(int idx) // Elimina el item
 {
     if (idx >= 0 && idx < (int)inventory.size())
     {
@@ -77,7 +77,7 @@ void deleteItem(int idx) //Elimina el item
     }
 }
 
-void showInventoryAndLevel(const std::string &user) //Enseña el inventario y el nivel
+void showInventoryAndLevel(const std::string &user) // Enseña el inventario y el nivel
 {
     showInventory();
     int lvl = getUserLevel(user);
@@ -86,4 +86,8 @@ void showInventoryAndLevel(const std::string &user) //Enseña el inventario y el
     std::cout << "\nLevel: " << lvl
               << " | EXP: " << exp
               << " (" << needed << " to next level)\n";
+}
+const std::vector<Item> &getInventory()
+{
+    return inventory;
 }
