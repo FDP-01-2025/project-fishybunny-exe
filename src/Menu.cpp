@@ -57,6 +57,28 @@ void manageUsers() {
 // Gestión de personajes (sin cambios)
 void createCharacterMenu(const string &username) {
     loadCharacters(username);
-    cout << "\nCharacter Management:\n";
-
+    cout << "\nCharacter Management:\n"
+              << "1) Create Character\n"
+              << "2) Delete Character\n"
+              << "3) Back\n"
+              << "Choose: ";
+    int c = getIntInput(1,3);
+    if (c == 1) {
+        cout << "Enter character name: ";
+        string name;
+        getline(cin, name);
+        cout << "Choose type ID (0-17): ";
+        int typeID = getIntInput(0,17);
+        createCharacter(name, typeID);
+    } else if (c == 2) {
+        showCharacters();
+        cout << "Select character # to delete (0 cancel): ";
+        int idx = getIntInput(0, (int)getCharacters().size());
+        if (idx > 0) deleteCharacter(idx - 1);
     }
+}
+
+// Mostrar reglas (sin cambios)
+void showRules() {
+    // tu implementación existente 
+}
