@@ -50,7 +50,7 @@ void startGame(const string &username) {
     Character player = (*pool)[idx];
     cout << "\nYou selected " << player.name << "!\n";
 
-    // ... resto del combate ...
+    // resto del combate 
 
 
 }
