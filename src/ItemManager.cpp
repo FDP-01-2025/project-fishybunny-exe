@@ -14,7 +14,7 @@ const int MAX_INV = 10;
 static const std::vector<Item> ALL_ITEMS = {
     {"Rusted Longsword", 20}, {"Ashen Warblade", 15}, {"Bone Cleaver", 10}, {"Serpent’s Rapier", 12}, {"Sunforged Greatsword", 8}, {"Frostbrand Axe", 10}, {"Thunderstrike Mace", 5}, {"Mercurial Dagger", 12}, {"Draconic Halberd", 7}, {"Wraithblade", 10}};
 
-void loadInventory(const std::string &user) //Carga el inventario del usuario desde un archivo
+void loadInventory(const std::string &user) // Carga el inventario del usuario desde un archivo
 {
     invUser = user;
     inventory.clear();
@@ -32,7 +32,7 @@ void loadInventory(const std::string &user) //Carga el inventario del usuario de
     }
 }
 
-void saveInventory(const std::string &user) //Se almacena el inventario del usuario en su archivo
+void saveInventory(const std::string &user) // Se almacena el inventario del usuario en su archivo
 {
     std::string line;
     for (size_t i = 0; i < inventory.size(); ++i)
@@ -44,7 +44,7 @@ void saveInventory(const std::string &user) //Se almacena el inventario del usua
     writeFileLines(user + "_inv.txt", {line});
 }
 
-void showInventory() //Muestra en pantalla el inventario del usuario
+void showInventory() // Muestra en pantalla el inventario del usuario
 {
     std::cout << "\nInventory for " << invUser << ":\n";
     for (size_t i = 0; i < inventory.size(); ++i)
@@ -52,4 +52,38 @@ void showInventory() //Muestra en pantalla el inventario del usuario
         std::cout << i + 1 << ") "
                   << inventory[i].name
                   << " (" << inventory[i].duration << " turns)\n";
-    }}
+    }
+}
+bool addRandomItem() //Añade un item random 
+{
+    if (inventory.size() >= MAX_INV)
+    {
+        std::cout << "Inventory full. Delete items first.\n";
+        return false;
+    }
+    int idx = rand() % ALL_ITEMS.size();
+    inventory.push_back(ALL_ITEMS[idx]);
+    saveInventory(invUser);
+    std::cout << "Obtained: " << ALL_ITEMS[idx].name << "!\n";
+    return true;
+}
+
+void deleteItem(int idx) //Elimina el item
+{
+    if (idx >= 0 && idx < (int)inventory.size())
+    {
+        inventory.erase(inventory.begin() + idx);
+        saveInventory(invUser);
+    }
+}
+
+void showInventoryAndLevel(const std::string &user) //Enseña el inventario y el nivel
+{
+    showInventory();
+    int lvl = getUserLevel(user);
+    int exp = getUserExp(user);
+    int needed = lvl * 10 - exp;
+    std::cout << "\nLevel: " << lvl
+              << " | EXP: " << exp
+              << " (" << needed << " to next level)\n";
+}
