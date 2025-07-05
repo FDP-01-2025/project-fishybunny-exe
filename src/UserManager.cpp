@@ -8,6 +8,9 @@ using namespace std;
 static vector<string> users;
 static const string USERS_FILE = "users.txt";
 
+static vector<string> users;
+static const string USERS_FILE = "users.txt";
+
 void loadUsers() {
     users.clear();
     vector<string> lines;
@@ -25,7 +28,7 @@ void saveUsers() {
 void showUsers() {
     cout << "\nUsers:\n";
     for (size_t i = 0; i < users.size(); ++i)
-        cout << i+1 << ") " << users[i] << "\n";
+       cout << i+1 << ") " << users[i] << "\n";
 }
 
 int selectUser() {
@@ -38,7 +41,7 @@ int selectUser() {
 
 int createUser(const string &name) {
     if (users.size() >= 3) {
-        cout << "Max 3 users.\n";
+       cout << "Max 3 users.\n";
         return -1;
     }
     users.push_back(name);
