@@ -5,8 +5,6 @@
 #include <vector>
 #include <string>
 using namespace std;
-static vector<string> users;
-static const string USERS_FILE = "users.txt";
 
 static vector<string> users;
 static const string USERS_FILE = "users.txt";
@@ -28,20 +26,20 @@ void saveUsers() {
 void showUsers() {
     cout << "\nUsers:\n";
     for (size_t i = 0; i < users.size(); ++i)
-       cout << i+1 << ") " << users[i] << "\n";
+        cout << i+1 << ") " << users[i] << "\n";
 }
 
 int selectUser() {
     if (users.empty()) return -1;
     showUsers();
-   cout << "Select user (#) or 0 to manage: ";
+    cout << "Select user (#) or 0 to manage: ";
     int c = getIntInput(0, (int)users.size());
     return c ? c - 1 : -1;
 }
 
 int createUser(const string &name) {
     if (users.size() >= 3) {
-       cout << "Max 3 users.\n";
+        cout << "Max 3 users.\n";
         return -1;
     }
     users.push_back(name);
@@ -63,3 +61,4 @@ string getUserName(int idx) {
 const vector<string>& getUsers() {
     return users;
 }
+

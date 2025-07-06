@@ -3,6 +3,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+
 static vector<Skill> skills;
 
 void loadSkills() {
@@ -43,6 +44,7 @@ void showSkills() {
                   << s.name 
                   << " (Cost " << s.cost 
                   << (s.special ? ", Special" : "") 
-                  << ", Type " << (s.typeID>=0?std::to_string(s.typeID):"Gen")
+                  << ", Type " << (s.typeID>=0?to_string(s.typeID):"Gen")
                   << ")\n";
     }
+}
