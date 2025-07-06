@@ -19,7 +19,7 @@ int createUser(const string &name);
 void deleteUser(int index);
 
 // Consulta nombre y lista interna
-std string getUserName(int index);
+string getUserName(int index);
 const vector<string>& getUsers();
 
 #endif   

@@ -5,7 +5,6 @@
 #include <vector>
 #include <string>
 using namespace std;
-
 static vector<string> users;
 static const string USERS_FILE = "users.txt";
 

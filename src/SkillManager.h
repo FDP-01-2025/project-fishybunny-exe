@@ -4,7 +4,8 @@
 #include <string>
 #include <vector>
 using namespace std;
-struct Skill {
+
+sstruct Skill {
     string name;
     int cost;
     int typeID;
@@ -15,6 +16,8 @@ void loadSkills();
 const vector<Skill>& getAllSkills();
 void showSkills();
 
-#endif 
+
+#endif
+
 
 
