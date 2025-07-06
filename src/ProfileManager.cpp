@@ -1,6 +1,6 @@
 //incluimos todas las librerias a usar
 #include "ProfileManager.h"
-#include "File_Manager.h"
+#include "FileManager.h"
 #include "Utils.h"
 #include <iostream>
 #include <vector>
@@ -29,3 +29,36 @@ static void loadProfile(const string &user, int &lvl, int &exp) {
             return;
         }
     }
+    // Si no existe o formato incorrecto
+    lvl = 1;
+    exp = 0;
+    writeFileLines(user + EXT, { "1,0" });
+}
+
+// Guarda perfil (nivel y EXP)
+static void saveProfile(const string &user, int lvl, int exp) {
+    writeFileLines(user + EXT, { to_string(lvl) + "," + to_string(exp) });
+}
+
+int getUserLevel(const string &username) {
+    int lvl, exp;
+    loadProfile(username, lvl, exp);
+    return lvl;
+}
+
+int getUserExp(const string &username) {
+    int lvl, exp;
+    loadProfile(username, lvl, exp);
+    return exp;
+}
+
+bool addUserExp(const string &username, int expGained) {
+    int lvl, exp;
+    loadProfile(username, lvl, exp);
+    exp += expGained;
+    bool leveledUp = false;
+    // Subir niveles mientras haya suficiente EXP
+    while (exp >= lvl * 10) {
+
+    }
+}
