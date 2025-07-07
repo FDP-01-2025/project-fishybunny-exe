@@ -4,7 +4,7 @@
 #include <string>
 #include <vector>
 #include "CharacterManager.h"
-
+using namespace std;
 // Perfil de usuario (nivel y EXP)
 int getUserLevel(const string &username);
 int getUserExp(const string &username);

@@ -6,76 +6,81 @@
 #include "Game.h"
 #include "Utils.h"
 using namespace std;
-int main() {
-    // Antes de llegar al menú principal, siempre cargamos usuarios
-    loadUsers();
-
-    string username;
-    int userIndex = -1;
-    // Si no hay usuarios, forzamos a gestionar usuarios
-    if (getUsers().empty()) {
-        cout << "No users found. Please create one.\n";
-        manageUsers();
-    }
-
-    // Selección inicial de usuario
-    while (true) {
-        showUsers();
-        cout << "Select user (#): ";
-        userIndex = getIntInput(1, (int)getUsers().size()) - 1;
-        if (userIndex >= 0) break;
-    }
-    username = getUserName(userIndex);
-    cout << "\nWelcome, " << username << "!\n";
-
-    // Carga inicial de datos del usuario
+// Ejecuta todo el flujo del menú de juego para un usuario dado
+void runGameSession(const string &username) {
+    // Carga datos del usuario
     loadCharacters(username);
     loadInventory(username);
+    bool backToUserMenu = false;
 
-    // Menú principal
-    showGameTitle();
-    bool exitGame = false;
-    while (!exitGame) {
-        showMainMenu();
-        int choice = selectMainOption();
-        switch (choice) {
+    while (!backToUserMenu) {
+        showGameTitle();
+        cout << "Welcome, " << username << "!\n";  // <-- Welcome tras el título
+        showGameMenu();
+        int gopt = selectGameOption();
+        switch (gopt) {
             case 1:
                 startGame(username);
                 break;
             case 2:
-                createCharacterMenu(username);
+                manageCharactersSubMenu(username);
                 break;
             case 3:
-                manageUsers();
-                // Tras gestionar usuarios, recargamos lista y re-seleccionamos uno
-                loadUsers();
-                showUsers();
-                cout << "Select user (#): ";
-                userIndex = getIntInput(1, (int)getUsers().size()) - 1;
-                username = getUserName(userIndex);
-                cout << "\nSwitched to user: " << username << "!\n";
-                // Recarga sus datos
-                loadCharacters(username);
-                loadInventory(username);
+                showRulesSubMenu();
                 break;
             case 4:
-                showRules();
-                break;
-            case 5:
                 showInventoryAndLevel(username);
                 break;
-            case 6:
-                exitGame = true;
+            case 5:
+                backToUserMenu = true;
                 break;
             default:
                 cout << "Invalid option.\n";
         }
     }
 
-    // Guardar todo al salir
+    // Guardar al volver al menú de usuarios
     saveCharacters(username);
     saveInventory(username);
     saveUsers();
-    cout << "Goodbye!" << endl;
+}
+
+int main() {
+    loadUsers();
+
+    while (true) {
+        // 1) Menú de Usuarios
+        showUserMenu();
+        int opt = selectUserMenuOption();
+
+        if (opt == 1) {
+            // Crear usuario y entrar de inmediato
+            cout << "Enter new user name: ";
+            string name;
+            getline(cin, name);
+            int idx = createUser(name);
+            if (idx >= 0) {
+                saveUsers();
+                runGameSession(name);
+            }
+        }
+        else if (opt == 2) {
+            // Borrar usuario
+            deleteUserSubMenu();
+        }
+        else if (opt == 3) {
+            // Elegir usuario y entrar
+            string username;
+            if (chooseUserSubMenu(username)) {
+                runGameSession(username);
+            }
+        }
+        else {
+            // Salir del programa
+            cout << "Exiting program. Goodbye!\n";
+            break;
+        }
+    }
+
     return 0;
 }
