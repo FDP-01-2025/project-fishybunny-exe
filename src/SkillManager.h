@@ -5,7 +5,7 @@
 #include <vector>
 using namespace std;
 
-sstruct Skill {
+struct Skill {
     string name;
     int cost;
     int typeID;
