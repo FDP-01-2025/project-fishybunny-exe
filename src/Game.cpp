@@ -7,50 +7,39 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <vector>
 using namespace std;
+// Lista completa de personajes predeterminados para seleccionar enemigo
+static const vector<Character> ALL_DEFAULT_CHARACTERS = {
+    {"Footman",1,16,0}, {"Pyromancer",1,0,0},   {"Hydromancer",1,1,0},
+    {"Earthshaper",1,2,0},{"Aeromancer",1,3,0}, {"Electroknight",1,4,0},
+    {"Cryomancer",1,5,0},{"Iron Golem",1,6,0},  {"Beastmaster",1,7,0},
+    {"Mystic Sage",1,8,0},{"Necromancer",1,9,0},{"Cleric",1,10,0},
+    {"Shadowblade",1,11,0},{"Druid",1,12,0},    {"Venomancer",1,13,0},
+    {"Psychic Monk",1,14,0},{"Dragon Knight",1,15,0},{"Rockguard",1,17,0}
+};
+
+// Estructura para llevar el objeto equipado y su índice en inventario
+struct Equipped {
+    float dmgPct = 0.0f;
+    float dodgePct = 0.0f;
+    int duration = 0;
+    int invIndex = -1;
+    string name;
+};
+
 void startGame(const string &username) {
     srand((unsigned)time(nullptr));
     cout << "\n=== Start Battle ===\n";
 
-    // Cargar datos
-    int userLevel      = getUserLevel(username);
-    auto defaultChars  = getDefaultCharactersUpToLevel(userLevel);
+    // Preparar datos del usuario
+    int lvl       = getUserLevel(username);
+    auto defsLvl  = getDefaultCharactersUpToLevel(lvl);
     loadCharacters(username);
-    auto customChars   = getCharacters();
+    auto customs  = getCharacters();
     loadSkills();
-
-    // Menu personajes propios
-    cout << "1) Default Characters (" << defaultChars.size() << " unlocked)\n"
-              << "2) Your Created Characters (" << customChars.size() << ")\n"
-              << "3) Back to Menu\n"
-              << "Choose: ";
-    int pc = getIntInput(1,3);
-    if (pc == 3) return;
-
-    vector<Character>* pool;
- if (pc == 2) {
-        if (customChars.empty()) {
-            std::cout << "You have no created characters. Please create one first.\n";
-            return;
-        }
-        pool = &customChars;
-    } else {
-        pool = &defaultChars;
-    }
-
-    // Listado y selección
-    cout << "\nSelect your character:\n";
-    for (size_t i = 0; i < pool->size(); ++i) {
-        auto &c = (*pool)[i];
-        cout << "  " << i+1 << ") "
-                  << c.name << " (" << getTypeName(c.typeID) << ")\n";
-    }
-    cout << "Choose: ";
-    int idx = getIntInput(1, (int)pool->size()) - 1;
-    Character player = (*pool)[idx];
-    cout << "\nYou selected " << player.name << "!\n";
+    // Carga inventario para uso posterior
+    loadInventory(username);
 
     // resto del combate 
-
-
 }
