@@ -5,4 +5,13 @@
 #include <vector>
 #include "CharacterManager.h"
 
+// Perfil de usuario (nivel y EXP)
+int getUserLevel(const string &username);
+int getUserExp(const string &username);
+bool addUserExp(const string &username, int expGained);
+
+// Personajes predeterminados desbloqueados por nivel
+vector<Character> getDefaultCharactersUpToLevel(int level);
+
+
 #endif //terminamos la comprobacion
