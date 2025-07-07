@@ -3,18 +3,20 @@
 
 #include <string>
 #include <vector>
+using namespace std;
 
-struct Item {
+struct Item
+{
     std::string name;
     int duration;
 };
 
-void loadInventory(const std::string &user);
-void saveInventory(const std::string &user);
+void loadInventory(const string &user);
+void saveInventory(const string &user);
 void showInventory();
 bool addRandomItem();
 void deleteItem(int idx);
-void showInventoryAndLevel(const std::string &user);
-const std::vector<Item>& getInventory();
+void showInventoryAndLevel(const string &user);
+const vector<Item> &getInventory();
 
 #endif

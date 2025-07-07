@@ -1,22 +1,22 @@
 #include "Utils.h"
 #include <iostream>
 #include <limits>
-
+using namespace std;
 // getIntInput: solicita hasta que el usuario introduce un entero válido entre min y max
 int getIntInput(int min, int max) {
     int v;
     while (true) {
-        if (!(std::cin >> v)) {
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cout << "Invalid input. Enter a number between " << min << " and " << max << ": ";
+        if (!(cin >> v)) {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Invalid input. Enter a number between " << min << " and " << max << ": ";
             continue;
         }
         if (v < min || v > max) {
-            std::cout << "Please enter a value between " << min << " and " << max << ": ";
+            cout << "Please enter a value between " << min << " and " << max << ": ";
             continue;
         }
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
         return v;
     }
 }
@@ -24,15 +24,15 @@ int getIntInput(int min, int max) {
 // getCharInput: lee el siguiente carácter no ignorando saltos de línea
 char getCharInput() {
     char c;
-    std::cin >> c;
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    cin >> c;
+    cin.ignore(numeric_limits<streamsize>::max(), '\n');
     return c;
 }
 
 // splitString: divide s en trozos según delimiter
-std::vector<std::string> splitString(const std::string &s, char delimiter) {
-    std::vector<std::string> parts;
-    std::string cur;
+vector<string> splitString(const string &s, char delimiter) {
+    vector<string> parts;
+    string cur;
     for (char ch : s) {
         if (ch == delimiter) {
             parts.push_back(cur);
@@ -61,8 +61,8 @@ float getTypeMultiplier(int atkType, int defType) {
 }
 
 // getTypeName: convierte un ID en su nombre textual
-std::string getTypeName(int typeID) {
-    static const std::vector<std::string> names = {
+string getTypeName(int typeID) {
+    static const vector<string> names = {
         "Fire","Water","Earth","Air","Lightning","Ice",
         "Metal","Beast","Mystic","Undead","Holy","Dark",
         "Nature","Poison","Psychic","Dragon","Normal","Rock"

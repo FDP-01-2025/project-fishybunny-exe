@@ -3,8 +3,8 @@
 
 #include <string>
 #include <vector>
-
-bool readFileLines(const std::string &path, std::vector<std::string> &lines);
-bool writeFileLines(const std::string &path, const std::vector<std::string> &lines);
+using namespace std;
+bool readFileLines(const string &path, vector<string> &lines);
+bool writeFileLines(const string &path, const vector<string> &lines);
 
 #endif
