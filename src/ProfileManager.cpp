@@ -1,14 +1,15 @@
-//incluimos todas las librerias a usar
 #include "ProfileManager.h"
 #include "FileManager.h"
 #include "Utils.h"
 #include <iostream>
 #include <vector>
 #include <algorithm>
+
 using namespace std;
 
-static const string EXT = "_profile.txt";//hacemos que EXT una varibale constante estatica que almacene la extension de nuestro archivo de texto
-// Lista completa de personajes por defecto
+static const string EXT = "_profile.txt";  // Sufijo usado para almacenar perfiles
+
+// Lista completa de personajes por defecto (nivel 1)
 static const vector<Character> ALL_DEFAULT_CHARS = {
     {"Footman",1,16,0},{"Pyromancer",1,0,0},{"Hydromancer",1,1,0},
     {"Earthshaper",1,2,0},{"Aeromancer",1,3,0},{"Electroknight",1,4,0},
@@ -18,7 +19,8 @@ static const vector<Character> ALL_DEFAULT_CHARS = {
     {"Psychic Monk",1,14,0},{"Dragon Knight",1,15,0},{"Rockguard",1,17,0}
 };
 
-// Carga perfil desde archivo o inicializa a nivel 1, EXP 0
+// Carga el perfil del usuario desde un archivo.
+// Si no existe o está malformado, se inicializa en nivel 1 con 0 EXP.
 static void loadProfile(const string &user, int &lvl, int &exp) {
     vector<string> lines;
     if (readFileLines(user + EXT, lines) && !lines.empty()) {
@@ -29,36 +31,55 @@ static void loadProfile(const string &user, int &lvl, int &exp) {
             return;
         }
     }
-    // Si no existe o formato incorrecto
     lvl = 1;
     exp = 0;
-    writeFileLines(user + EXT, { "1,0" });
+    writeFileLines(user + EXT, { "1,0" });  // Guardar estado inicial
 }
 
-// Guarda perfil (nivel y EXP)
+// Guarda el perfil del usuario (nivel y experiencia) en el archivo correspondiente
 static void saveProfile(const string &user, int lvl, int exp) {
     writeFileLines(user + EXT, { to_string(lvl) + "," + to_string(exp) });
 }
 
+// Devuelve el nivel actual del usuario
 int getUserLevel(const string &username) {
     int lvl, exp;
     loadProfile(username, lvl, exp);
     return lvl;
 }
 
+// Devuelve la experiencia actual del usuario
 int getUserExp(const string &username) {
     int lvl, exp;
     loadProfile(username, lvl, exp);
     return exp;
 }
 
+// Añade experiencia al usuario y gestiona subida de nivel si corresponde
 bool addUserExp(const string &username, int expGained) {
     int lvl, exp;
     loadProfile(username, lvl, exp);
     exp += expGained;
     bool leveledUp = false;
-    // Subir niveles mientras haya suficiente EXP
-    while (exp >= lvl * 10) {
 
+    // Mientras la experiencia acumulada sea suficiente, subir de nivel
+    while (exp >= lvl * 10) {
+        exp -= lvl * 10;
+        lvl++;
+        leveledUp = true;
     }
+
+    saveProfile(username, lvl, exp);
+    
+    if (leveledUp) {
+        cout << "Reached level " << lvl << "!\n";
+    }
+
+    return leveledUp;
+}
+
+// Devuelve una lista de personajes desbloqueados según el nivel del usuario
+vector<Character> getDefaultCharactersUpToLevel(int level) {
+    size_t cnt = min((size_t)level, ALL_DEFAULT_CHARS.size());
+    return { ALL_DEFAULT_CHARS.begin(), ALL_DEFAULT_CHARS.begin() + cnt };
 }
