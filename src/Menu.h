@@ -3,17 +3,22 @@
 #include <string>
 using namespace std;
 // Interfaz del menú
-void showGameTitle();
-void showMainMenu();
-int selectMainOption();
-
+void showUserMenu();
+int selectUserMenuOption();
 // Gestión de usuarios (ahora también accesible desde el menú principal)
-void manageUsers();
+void createUserSubMenu();
+void deleteUserSubMenu();
+bool chooseUserSubMenu(string &outUsername);
 
+// Menu de juego
+void showGameTitle();
+void showGameMenu();
+int selectGameOption();
 // Gestión de personajes
-void createCharacterMenu(const string &username);
+void manageCharactersSubMenu(const string &username);
 
 // Ver reglas
-void showRules();
+void showRules();            // <-- añadida
+void showRulesSubMenu();
 
 #endif 
