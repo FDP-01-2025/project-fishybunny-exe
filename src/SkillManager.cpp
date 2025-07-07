@@ -8,6 +8,10 @@ static vector<Skill> skills;
 
 void loadSkills() {
     skills = {
+// Genéricas:
+        {"Basic Attack",1,-1,false}, {"Guard Stance",1,-1,false},
+        {"Adrenaline Rush",5,-1,false},{"Battle Cry",4,-1,false},
+//Por tipo:
         {"Crimson Slash",3,0,false}, {"Ember Strike",5,0,true},
         {"Aqua Shield",4,1,false},   {"Tidal Wave",7,1,true},
         {"Earthen Bash",3,2,false},  {"Stonefist",6,2,true},
@@ -25,11 +29,10 @@ void loadSkills() {
         {"Mind Spike",4,14,false},   {"Psychic Storm",8,14,true},
         {"Dragon’s Claw",5,15,false},{"Drake Fury",9,15,true},
         {"Quick Jab",2,16,false},    {"Perfect Strike",5,16,true},
-        {"Rock Throw",3,17,false},   {"Boulder Crush",6,17,true},
-        // Genéricas:
-        {"Basic Attack",1,-1,false}, {"Guard Stance",1,-1,false},
-        {"Adrenaline Rush",5,-1,false},{"Battle Cry",4,-1,false}
+        {"Rock Throw",3,17,false},   {"Boulder Crush",6,17,true}
     };
+    // Nueva habilidad de curación universal
+    skills.push_back({"Rejuvenate",7,-1,true});  // 7 AP, cura 10 HP, usable por todos
 }
 
 const vector<Skill>& getAllSkills() {
@@ -44,7 +47,8 @@ void showSkills() {
                   << s.name 
                   << " (Cost " << s.cost 
                   << (s.special ? ", Special" : "") 
-                  << ", Type " << (s.typeID>=0? to_string(s.typeID):"Gen")
+                  << ", Type " 
+                  << (s.typeID>=0?getTypeName(s.typeID):"Gen")
                   << ")\n";
     }
 }
