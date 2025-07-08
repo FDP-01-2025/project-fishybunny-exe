@@ -332,10 +332,10 @@ Press ENTER to go back...
 <img src="Images/profilemanagerh.png" alt="Profilemanagerh" width="300"/>
 
 14. **Skillmanagercpp**
-<img src="Images/Skillmanagercpp.png" alt="Skillmanagercpp" width="300"/> 
+<img src="Images/SkillManagercpp" alt="Skillmanagercpp" width="300"/> 
 
 15. **Skillmanagerh**
-<img src="Images/Skillmanagerh.png" alt="Skillmanagerh" width="300"/>
+<img src="Images/SkillManagerh.png" alt="Skillmanagerh" width="300"/>
 
 16. **Usermanagercpp**
 <img src="Images/UserManagercpp.png" alt="Usermanagercpp" width="300"/>
