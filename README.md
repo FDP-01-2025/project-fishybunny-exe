@@ -71,15 +71,18 @@
 ## Technical Details
 - **Language**: C++11 
 # 1. Clone the repositorie in bash
+```
 git clone https://github.com/FDP-01-2025/project-fishybunny-exe.git
  cd project-fishybunny-exe/
-
-# 2. Compile the project
+```
+- **Compile the project**
+```
 g++ -std=c++11 -I src src/*.cpp -o deadly_roll
-
-# 3. Execute the game
+```
+- **Execute the game**
+```
 ./deadly_roll
-
+```
 - **Project Structure**:  
   ```
   project-root/
@@ -113,7 +116,7 @@ Choose: _
 
 ---
 
-## 2) Game Session
+## 2) Game Menu
 
 When you choose “Bunny”:
 
