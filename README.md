@@ -288,16 +288,44 @@ Press ENTER to go back...
 
 ---
 ### Flow Chart
-1. **CharacterManagerCPP**
+1. **CharacterManagercpp**
 <img src="Images/CharacterManagercpp.png" alt="CharacterManagerCPP" width="300"/>
-
-2. **CharacterManagerH**
-   ![](charactermanagerh.png)
-3.**FileManagerCPP**
-   ![](filemanagercpp.png)
-4.**FileManagerH**
-   ![](filemanagerh.png)
-5.**GameCPP**
+2. **CharacterManagerh**
+<img src="Images/charactermanagerh.png" alt="CharacterManagerh" width="300"/>
+3. **FileManagercpp**
+<img src="Images/filemanagercpp.png" alt="FileManagercpp" width="300"/>
+4. **FileManagerh**
+<img src="Images/filemanagerh.png" alt="FileManagerh" width="300"/>
+5. **Gamecpp**
+<img src="Images/Gamecpp.png" alt="Gamecpp" width="300"/>
+6. **Gameh**
+<img src="Images/gameh.png" alt="Gameh" width="300"/>
+7. **Itemmanagercpp**
+<img src="Images/itemmanagercpp.png" alt="Itemmanagercpp" width="300"/>
+8. **Itemmanagerh**
+<img src="Images/itemmanagerh.png" alt="Itemmanagerh" width="300"/>
+9. **Maincpp**
+<img src="Images/Maincpp.png" alt="Maincpp" width="300"/>
+10. **Menucpp**
+<img src="Images/Menucpp.png" alt="Menucpp" width="300"/> 
+11. **Menuh**
+<img src="Images/Menuh.png" alt="Menuh" width="300"/>   
+12. **Profilemanagercpp**
+<img src="Images/profilemanagercpp.png" alt="Profilemanagercpp" width="300"/>   
+13. **Profilemanagerh**
+<img src="Images/profilemanagerh.png" alt="Profilemanagerh" width="300"/>
+14. **Skillmanagercpp**
+<img src="Images/Skillmanagercpp.png" alt="Skillmanagercpp" width="300"/> 
+15. **Skillmanagerh**
+<img src="Images/skillmanagerh.png" alt="Skillmanagerh" width="300"/>
+16. **Usermanagercpp**
+<img src="Images/UserManagercpp.png" alt="Usermanagercpp" width="300"/>
+17. **Usermanagerh**
+<img src="Images/usermanagerh.png" alt="Usermanagerh" width="300"/>
+18. **Utilscpp**
+<img src="Images/Utilscpp.png" alt="Utilscpp" width="300"/>    
+19. **Utilsh**
+<img src="Images/Utilsh.png" alt="Utilsh" width="300"/> 
 ## Team
 **Team Name:** FishyBunny.exe
 
