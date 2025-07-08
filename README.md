@@ -81,11 +81,11 @@ g++ -std=c++11 -I src src/*.cpp -o deadly_roll
 ```
 - **Execute the game in console**
 ```
-You could just execute the .exe program called *"deadly_roll.exe"* included in the game files.
+./deadly_roll
 ```
 - **Another Way**
 ```
-./deadly_roll
+You can just execute the .exe program called "deadly_roll.exe" included in the game files.
 ```
 - **Project Structure**:  
   ```
@@ -292,61 +292,61 @@ Press ENTER to go back...
 
 ---
 ### Flow Chart
-1. **CharacterManagercpp**
+1. **CharacterManager.cpp**
 <img src="Images/CharacterManagercpp.png" alt="CharacterManagerCPP" width="300"/>
 
-2. **CharacterManagerh**
+2. **CharacterManager.h**
 <img src="Images/charactermanagerh.png" alt="CharacterManagerh" width="300"/>
 
-3. **FileManagercpp**
+3. **FileManager.cpp**
 <img src="Images/filemanagercpp.png" alt="FileManagercpp" width="300"/>
 
-4. **FileManagerh**
+4. **FileManager.h**
 <img src="Images/filemanagerh.png" alt="FileManagerh" width="300"/>
 
-5. **Gamecpp**
+5. **Game.cpp**
 <img src="Images/Gamecpp.png" alt="Gamecpp" width="300"/>
 
-6. **Gameh**
+6. **Game.h**
 <img src="Images/gameh.png" alt="Gameh" width="300"/>
 
-7. **Itemmanagercpp**
+7. **Itemmanager.cpp**
 <img src="Images/itemmanagercpp.png" alt="Itemmanagercpp" width="300"/>
 
-8. **Itemmanagerh**
+8. **Itemmanager.h**
 <img src="Images/itemmanagerh.png" alt="Itemmanagerh" width="300"/>
 
-9. **Maincpp**
+9. **Main.cpp**
 <img src="Images/Maincpp.png" alt="Maincpp" width="300"/>
 
-10. **Menucpp**
+10. **Menu.cpp**
 <img src="Images/Menucpp.png" alt="Menucpp" width="300"/> 
 
-11. **Menuh**
+11. **Menu.h**
 <img src="Images/Menuh.png" alt="Menuh" width="300"/>   
 
-12. **Profilemanagercpp**
+12. **Profilemanager.cpp**
 <img src="Images/profilemanagercpp.png" alt="Profilemanagercpp" width="300"/> 
 
-13. **Profilemanagerh**
+13. **Profilemanager.h**
 <img src="Images/profilemanagerh.png" alt="Profilemanagerh" width="300"/>
 
-14. **Skillmanagercpp**
-<img src="Images/skillmanagercpp" alt="Skillmanagercpp" width="300"/> 
+14. **Skillmanager.cpp**
+<img src="Images/skillmanagercpp.png" alt="Skillmanagercpp" width="300"/> 
 
-15. **Skillmanagerh**
+15. **Skillmanager.h**
 <img src="Images/skillmanagerh.png" alt="Skillmanagerh" width="300"/>
 
-16. **Usermanagercpp**
+16. **Usermanager.cpp**
 <img src="Images/UserManagercpp.png" alt="Usermanagercpp" width="300"/>
 
-17. **Usermanagerh**
+17. **Usermanager.h**
 <img src="Images/usermanagerh.png" alt="Usermanagerh" width="300"/>
 
-18. **Utilscpp**
+18. **Utils.cpp**
 <img src="Images/Utilscpp.png" alt="Utilscpp" width="300"/>    
 
-19. **Utilsh**
+19. **Utils.h**
 <img src="Images/Utilsh.png" alt="Utilsh" width="300"/> 
 
 
