@@ -289,7 +289,7 @@ Press ENTER to go back...
 ---
 ### Flow Chart
 1. **CharacterManagerCPP**
-<img src="images/CharacterManagercpp.png" alt="CharacterManagerCPP" width="400"/>
+<img src="Images/CharacterManagercpp.png" alt="CharacterManagerCPP" width="400"/>
 
 2. **CharacterManagerH**
    ![](charactermanagerh.png)
