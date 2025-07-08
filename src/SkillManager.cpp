@@ -6,7 +6,7 @@ using namespace std;
 
 static vector<Skill> skills;
 
-void loadSkills() {
+void loadSkills() { // Lista de habilidades del juego
     skills = {
 // Genéricas:
         {"Basic Attack",1,-1,false}, {"Guard Stance",1,-1,false},
@@ -35,20 +35,20 @@ void loadSkills() {
     skills.push_back({"Rejuvenate",7,-1,true});  // 7 AP, cura 10 HP, usable por todos
 }
 
-const vector<Skill>& getAllSkills() {
+const vector<Skill>& getAllSkills() { // Devuelve todas las habilidades (para solo lectura)
     return skills;
 }
 
-void showSkills() {
+void showSkills() { // Muestra todas las habilidades en pantalla
     cout << "\nAvailable Skills:\n";
     for (size_t i = 0; i < skills.size(); ++i) {
-        auto &s = skills[i];
+        auto &s = skills[i]; // Referencia a la habilidad actual
         cout << i+1 << ") " 
-                  << s.name 
-                  << " (Cost " << s.cost 
-                  << (s.special ? ", Special" : "") 
+                  << s.name  // Nombre
+                  << " (Cost " << s.cost  //Costo en puntos
+                  << (s.special ? ", Special" : "")  // Si es especial, lo indica
                   << ", Type " 
-                  << (s.typeID>=0?getTypeName(s.typeID):"Gen")
+                  << (s.typeID>=0?getTypeName(s.typeID):"Gen") //Nombre del tipo
                   << ")\n";
     }
 }

@@ -15,11 +15,12 @@ void showUserMenu() {
               << "4) Back (Exit)\n"
               << "Choose: ";
 }
-int selectUserMenuOption() {
-    return getIntInput(1,4);
+int selectUserMenuOption() { 
+    return getIntInput(1,4); // Permite al usuario seleccionar una opción del menú (1 a 4)
+
 }
 
-void createUserSubMenu() {
+void createUserSubMenu() { //Menu para crear usuario
     while (true) {
         cout << "\n--- CREATE USER ---\n"
                   << "1) Enter new user name\n"
@@ -29,7 +30,7 @@ void createUserSubMenu() {
         if (c == 1) {
             cout << "New user name: ";
             string name; getline(cin, name);
-            createUser(name);
+            createUser(name); // Crea usuario
             saveUsers();
         } else break;
     }
@@ -42,29 +43,29 @@ void deleteUserSubMenu() {
                   << "1) Select user to delete\n"
                   << "2) Back\n"
                   << "Choose: ";
-        int c = getIntInput(1,2);
-        if (c == 1) {
-            showUsers();
+        int c = getIntInput(1,2); //Permite elegir entre 1 y 2
+        if (c == 1) { //Si la eleccion es 1
+            showUsers(); //Muestra usuario
             cout << "Delete user #: ";
             int idx = getIntInput(1, (int)getUsers().size()) - 1;
-            deleteUser(idx);
-            saveUsers();
+            deleteUser(idx); //Elimina usuario
+            saveUsers(); //Guarda
         } else break;
     }
 }
 
-bool chooseUserSubMenu(string &outUsername) {
+bool chooseUserSubMenu(string &outUsername) { //Mneu para elegir usuario
     while (true) {
-        showUsers();
+        showUsers(); //Muestra usuarios
         cout << "\n--- CHOOSE USER ---\n"
                   << "1) Select user\n"
                   << "2) Back\n"
                   << "Choose: ";
-        int c = getIntInput(1,2);
-        if (c == 1) {
-            showUsers();
+        int c = getIntInput(1,2); //Eleccion entre 1 y 2
+        if (c == 1) { //Si es 1
+            showUsers(); //Muestra usuarios
             cout << "User #: ";
-            int idx = getIntInput(1, (int)getUsers().size()) - 1;
+            int idx = getIntInput(1, (int)getUsers().size()) - 1; //Eleccion
             outUsername = getUserName(idx);
             return true;
         } else {
@@ -78,7 +79,7 @@ void showGameTitle() {
     cout << "\n=== DEADLY ROLL ===\n";
 }
 
-void showGameMenu() {
+void showGameMenu() { //Menu del juego
     cout << "\n--- GAME MENU ---\n"
               << "1) Play Game\n"
               << "2) Manage Characters\n"
@@ -89,10 +90,10 @@ void showGameMenu() {
 }
 
 int selectGameOption() {
-    return getIntInput(1,5);
+    return getIntInput(1,5); //Eleccion entre 1 y 5
 }
 // Gestión de personajes
-void manageCharactersSubMenu(const string &username) {
+void manageCharactersSubMenu(const string &username) { //Menu de personajes
     while (true) {
         loadCharacters(username);
         cout << "\n--- CHARACTER MENU ---\n"
@@ -108,13 +109,13 @@ void manageCharactersSubMenu(const string &username) {
             cout << "Available Types:\n";
             for (int t = 0; t < 18; ++t)
                 cout << "  " << t << ") " << getTypeName(t) << "\n";
-            cout << "Choose type #: ";
+            cout << "Choose type #: "; //Elegir tipos
             int typeID = getIntInput(0,17);
-            createCharacter(name, typeID);
-            saveCharacters(username);
+            createCharacter(name, typeID); //Crear
+            saveCharacters(username); //Guardar nuevo
         } else if (c == 2) {
             showCharacters();
-            cout << "Select # to delete (0 cancel): ";
+            cout << "Select # to delete (0 cancel): "; //Seleccion
             int idx = getIntInput(0, (int)getCharacters().size());
             if (idx > 0) {
                 deleteCharacter(idx - 1);
@@ -181,7 +182,7 @@ void showRules() {
     cout << endl;
 }
 
-void showRulesSubMenu() {
+void showRulesSubMenu() { //Mostrar reglas
     showRules();
     cout << "\nPress ENTER to go back...";
     cin.get();
