@@ -93,7 +93,8 @@
 
 ## Console Mockups
 
-### User Menu
+## 1) User Menu
+
 ```
 === USER MENU ===
 1) Create User
@@ -103,10 +104,20 @@
 Choose: _
 ```
 
-### Game Menu
+* **Create User** → asks for a name, comes back to this menu.
+* **Delete User** → shows user list, ask for who you want to delete, comes back.
+* **Choose User** → shows user list, ask for who you choose, enters game session.
+* **Exit Program** → finishes the program.
+
+---
+
+## 2) Game Session
+
+When you choose “ALice”:
+
 ```
 === DEADLY ROLL ===
-Welcome, <Username>!
+Welcome, Alice!
 
 --- GAME MENU ---
 1) Play Game
@@ -117,20 +128,161 @@ Welcome, <Username>!
 Choose: _
 ```
 
-### Battle Turn
+---
+
+## 3) Play Game
+
+### 3.1) Equip an object (optional)
+
+```
+Equip an item before battle? (0 to skip)
+1) Rusted Longsword (5 turns remaining)
+2) Frostbrand Axe (3 turns remaining)
+3) ... 
+Choose item #: _
+```
+
+### 3.2) Character Selection
+
+```
+1) Default Characters (18)
+2) Your Characters (2)
+3) Back
+Choose: 1
+
+Select your character:
+  1) Footman (Normal)
+  2) Pyromancer (Fire)
+  3) ...
+Choose: _
+```
+
+### 3.3) Enemy Selection (Random)
+
+```
+Enemy: Iron Golem (Metal)
+```
+
+---
+
+## 4) Battle Screen
+
+Every turn it shows the status and options:
+
 ```
 [Status] You: 30 HP | Enemy: 30 HP
 
 -- Roll dice (ENTER) --
+```
+
+After push ENTER:
+
+```
 You rolled: 4    Enemy rolled: 2
 You win the roll! AP = 4
 
+HP 30 vs 30 | AP = 4
 0) Skip
 1) Basic Attack (1 AP, 5 dmg)
 2) Ember Strike (5 AP, 10 dmg)
 3) Rejuvenate (7 AP, +10 HP)
+Choose action: _
+```
+
+* If you choose **Basic Attack**, it shows:
+
+  ```
+  You hit for 5 damage!
+  ```
+* If the enemy dodges:
+
+  ```
+  Enemy dodged your Basic Attack!
+  ```
+
+Then it is enemy turn:
+
+```
+Enemy wins roll! Enemy AP = 3
+Enemy uses Iron Wall and heals 10 HP!
+```
+
+And it is a loop until someone win:
+
+```
+*** You Win! ***
+You gained 7 EXP.
+Rusted Longsword has 4 turns remaining in your inventory.
+```
+
+Or:
+
+```
+*** You Lose... ***
+```
+
+---
+
+## 5) Manage Characters
+
+```
+--- CHARACTER MENU ---
+1) Create Character
+2) Delete Character
+3) Back
 Choose: _
 ```
+
+* **Create** → ask you a name, shows you a list of the types, asks you a type for your character, comes back.
+* **Delete** → Shows you the created character, asks for who you want to delete, comes back.
+
+---
+
+## 6) View Rules
+
+```
+=== GAME RULES ===
+
+Types:
+  0) Fire
+  1) Water
+  ...
+ 17) Rock
+
+Type Matchups (A > B):
+  Fire > Ice, Ice > Water, Water > Fire
+  ...
+
+Default Characters:
+  Footman (Normal)
+  Pyromancer (Fire)
+  ...
+
+Special Items (Duration, +% Dmg, +% Dodge):
+  Rusted Longsword (20 turns): +10% dmg, +0% dodge
+  Frostbrand Axe  (10 turns):  +0% dmg, +15% dodge
+  ...
+
+Press ENTER to go back...
+```
+
+---
+
+## 7) Inventory & Level
+
+```
+Inventory for Alice:
+  1) Rusted Longsword (4 turns remaining)
+  2) Frostbrand Axe  (10 turns remaining)
+  ...
+
+Level: 3 | EXP: 17 (30 to next level)
+
+Press ENTER to go back...
+```
+
+---
+
 
 ## Team
 **Team Name:** FishyBunny.exe
