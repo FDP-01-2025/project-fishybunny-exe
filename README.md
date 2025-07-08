@@ -293,16 +293,16 @@ Press ENTER to go back...
 ---
 ### Flow Chart
 1. **CharacterManager.cpp**
-<img src="Images/CharacterManagercpp.png" alt="CharacterManagerCPP" width="300"/>
+<img src="Images/Charactermanagercpp.png" alt="CharacterManagerCPP" width="300"/>
 
 2. **CharacterManager.h**
-<img src="Images/CharacterManagerh.png" alt="CharacterManagerh" width="300"/>
+<img src="Images/Charactermanagerh.png" alt="CharacterManagerh" width="300"/>
 
 3. **FileManager.cpp**
-<img src="Images/FileManagercpp.png" alt="FileManagercpp" width="300"/>
+<img src="Images/Filemanagercpp.png" alt="FileManagercpp" width="300"/>
 
 4. **FileManager.h**
-<img src="Images/FileManagerh.png" alt="FileManagerh" width="300"/>
+<img src="Images/Filemanagerh.png" alt="FileManagerh" width="300"/>
 
 5. **Game.cpp**
 <img src="Images/Gamecpp.png" alt="Gamecpp" width="300"/>
@@ -311,10 +311,10 @@ Press ENTER to go back...
 <img src="Images/Gameh.png" alt="Gameh" width="300"/>
 
 7. **Itemmanager.cpp**
-<img src="Images/ItemManagercpp.png" alt="Itemmanagercpp" width="300"/>
+<img src="Images/Itemmanagercpp.png" alt="Itemmanagercpp" width="300"/>
 
 8. **Itemmanager.h**
-<img src="Images/ItemManagerh.png" alt="Itemmanagerh" width="300"/>
+<img src="Images/Itemmanagerh.png" alt="Itemmanagerh" width="300"/>
 
 9. **Main.cpp**
 <img src="Images/Maincpp.png" alt="Maincpp" width="300"/>
@@ -326,22 +326,22 @@ Press ENTER to go back...
 <img src="Images/Menuh.png" alt="Menuh" width="300"/>   
 
 12. **Profilemanager.cpp**
-<img src="Images/ProfileManagercpp.png" alt="Profilemanagercpp" width="300"/>   
+<img src="Images/Profilemanagercpp.png" alt="Profilemanagercpp" width="300"/>   
 
 13. **Profilemanager.h**
-<img src="Images/ProfileManagerh.png" alt="Profilemanagerh" width="300"/>
+<img src="Images/Profilemanagerh.png" alt="Profilemanagerh" width="300"/>
 
 14. **Skillmanager.cpp**
-<img src="Images/SkillManagercpp.png" alt="Skillmanagercpp" width="300"/> 
+<img src="Images/Skillmanagercpp.png" alt="Skillmanagercpp" width="300"/> 
 
 15. **Skillmanager.h**
-<img src="Images/SkillManagerh.png" alt="Skillmanagerh" width="300"/>
+<img src="Images/Skillmanagerh.png" alt="Skillmanagerh" width="300"/>
 
 16. **Usermanager.cpp**
-<img src="Images/UserManagercpp.png" alt="Usermanagercpp" width="300"/>
+<img src="Images/Usermanagercpp.png" alt="Usermanagercpp" width="300"/>
 
 17. **Usermanager.h**
-<img src="Images/UserManagerh.png" alt="Usermanagerh" width="300"/>
+<img src="Images/Usermanagerh.png" alt="Usermanagerh" width="300"/>
 
 18. **Utils.cpp**
 <img src="Images/Utilscpp.png" alt="Utilscpp" width="300"/>    
