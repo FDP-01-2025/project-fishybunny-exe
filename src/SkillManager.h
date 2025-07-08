@@ -6,15 +6,15 @@
 using namespace std;
 
 struct Skill {
-    string name;
-    int cost;
-    int typeID;
-    bool special;
+    string name; //Nombre
+    int cost; //Costo
+    int typeID; //Tipo
+    bool special; //Indica si es especial
 };
 
-void loadSkills();
-const vector<Skill>& getAllSkills();
-void showSkills();
+void loadSkills(); //Carga habilidades
+const vector<Skill>& getAllSkills(); // Devuelve todas las habilidades (solo lectura)
+void showSkills(); //Muestra las habilidades
 
 
 #endif
