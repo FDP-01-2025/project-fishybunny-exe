@@ -69,15 +69,17 @@
    - Clear menus, prompts, status messages, and feedback.
 
 ## Technical Details
-- **Language**: C++11  
-- **Compilation**:  
-```
-  g++ -std=c++11 -I src src/*.cpp -o deadly_roll
-  ```
-- **Execution**:
-  ```
-  ./deadly_roll
-  ```  
+- **Language**: C++11 
+# 1. Clone the repositorie in bash
+git clone https://github.com/FDP-01-2025/project-fishybunny-exe.git
+ cd project-fishybunny-exe/
+
+# 2. Compile the project
+g++ -std=c++11 -I src src/*.cpp -o deadly_roll
+
+# 3. Execute the game
+./deadly_roll
+
 - **Project Structure**:  
   ```
   project-root/
@@ -106,18 +108,18 @@ Choose: _
 
 * **Create User** → asks for a name, comes back to this menu.
 * **Delete User** → shows user list, ask for who you want to delete, comes back.
-* **Choose User** → shows user list, ask for who you choose, enters game session.
+* **Choose User** → shows user list, ask for who you choose, logs in.
 * **Exit Program** → finishes the program.
 
 ---
 
 ## 2) Game Session
 
-When you choose “ALice”:
+When you choose “Bunny”:
 
 ```
 === DEADLY ROLL ===
-Welcome, Alice!
+Welcome, Bunny!
 
 --- GAME MENU ---
 1) Play Game
@@ -271,7 +273,7 @@ Press ENTER to go back...
 ## 7) Inventory & Level
 
 ```
-Inventory for Alice:
+Inventory for Bunny:
   1) Rusted Longsword (4 turns remaining)
   2) Frostbrand Axe  (10 turns remaining)
   ...
