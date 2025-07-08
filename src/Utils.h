@@ -11,7 +11,7 @@ int getIntInput(int min, int max);
 char getCharInput();
 
 // Rompe una cadena en partes según un delimitador
-vector<string> splitString(const std::string &s, char delimiter);
+vector<string> splitString(const string &s, char delimiter);
 
 // Multiplicador de tipos (para futuro uso en daño elemental)
 float getTypeMultiplier(int atkType, int defType);
