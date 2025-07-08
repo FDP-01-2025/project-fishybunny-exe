@@ -70,16 +70,16 @@
 
 ## Technical Details
 - **Language**: C++11 
-# 1. Clone the repositorie in bash
+- **Clone the repositorie in bash**
 ```
 git clone https://github.com/FDP-01-2025/project-fishybunny-exe.git
  cd project-fishybunny-exe/
 ```
-- **Compile the project**
+- **Compile the project in console**
 ```
 g++ -std=c++11 -I src src/*.cpp -o deadly_roll
 ```
-- **Execute the game**
+- **Execute the game in console**
 ```
 ./deadly_roll
 ```
@@ -287,8 +287,16 @@ Press ENTER to go back...
 ```
 
 ---
-
-
+### Flow Chart
+1. **CharacterManagerCPP**
+   ![](CharacterManagercpp.png)
+2. **CharacterManagerH**
+   ![](charactermanagerh.png)
+3.**FileManagerCPP**
+   ![](filemanagercpp.png)
+4.**FileManagerH**
+   ![](filemanagerh.png)
+5.**GameCPP**
 ## Team
 **Team Name:** FishyBunny.exe
 
