@@ -332,7 +332,7 @@ Press ENTER to go back...
 <img src="Images/profilemanagerh.png" alt="Profilemanagerh" width="300"/>
 
 14. **Skillmanager.cpp**
-<img src="Images/skillmanagercpp.png" alt="Skillmanagercpp" width="300"/> 
+<img src="Images/SkillManagercpp.png" alt="Skillmanagercpp" width="300"/> 
 
 15. **Skillmanager.h**
 <img src="Images/skillmanagerh.png" alt="Skillmanagerh" width="300"/>
